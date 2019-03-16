@@ -1,0 +1,6 @@
+## Server side rendering and routing done w/ NextJS
+- NextJS handles the import of React...
+- Next Handles routing...
+- NextJS creates and wraps your page on a `App` component that can be customized to your needs.
+
+# ./pages are light ans heavy FED logic is on ./components 
