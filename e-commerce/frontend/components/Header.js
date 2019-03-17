@@ -1,6 +1,22 @@
-import Nav from './Nav'
 import Link from 'next/link'
 import styled from 'styled-components'
+import Router from 'next/router'
+import NProgress from 'nprogress'
+import Nav from './Nav'
+
+// listen for NextJS router events
+Router.onRouteChangeStart = () => {
+  // console.log('onRouteChangeStart Triggered')
+  NProgress.start()
+}
+Router.onRouteChangeComplete = () => {
+  // console.log('onRouteChangeComplete Triggered')
+  NProgress.done()
+}
+Router.onRouteChangeError = () => {
+  // console.log('onRouteChangeError Triggered')
+  NProgress.done()
+}
 
 // Logo Styles
 const Logo = styled.h1`
