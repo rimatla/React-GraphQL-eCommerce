@@ -1,0 +1,12 @@
+# client facing queries 
+type Dog {
+    name: String! 
+}
+
+type Mutation {
+    createDog(name: String!): Dog
+}
+
+type Query {
+    dogs: [Dog]!
+}

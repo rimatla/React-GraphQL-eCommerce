@@ -17,6 +17,10 @@
 - prisma deploy --env-file variables.env
 - or `npm run deploy`
 
+# Start server
+- `npm run dev` is a combination of debug and playground in parallel 
+- `npm run debug` or `npm start`
+
 # queries playground
 ```
 # Write your query or mutation here
