@@ -21,6 +21,11 @@
 - `npm run dev` is a combination of debug and playground in parallel 
 - `npm run debug` or `npm start`
 
+# Steps to whenever you need to update a piece of data
+- datamodel.prisma
+- deploy it tp Prisma so DB csn be updated (crucial step) 
+- schema.graphql 
+
 # queries playground
 ```
 # Write your query or mutation here
@@ -67,6 +72,37 @@ query {
     aggregate {
       count
     }
+  }
+}
+```
+
+``` 
+PRISMA PLAYGROUND MUTATION
+mutation {
+  createItem(data: {
+    title: "Sengs"
+    description: "qwdef"
+    image: "dog.jpg"
+    largeImage: "cat.jpg"
+    price: 1000
+  }) {
+    id
+    title
+  }
+}
+```
+```
+YOGA PLAYGROUND MUTATION
+mutation {
+  createItem(
+    title: "Sengs"
+    description: "qwdef"
+    image: "dog.jpg"
+    largeImage: "cat.jpg"
+    price: 1000
+  ) {
+    id
+    title
   }
 }
 ```
