@@ -1,4 +1,8 @@
-.DS_Store
-node_modules
 .idea
+node_modules/
+.DS_Store
+*.log
+.next/
+.build/
+layout.md
 variables.env
