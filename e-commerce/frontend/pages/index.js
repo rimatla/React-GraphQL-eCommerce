@@ -1,9 +1,11 @@
 // NextJS handles the import of React...
 // Next Handles routing...
 
+import Items from '../components/Items'
+
 const Home = props => (
   <div>
-    <p>Home!</p>
+    <Items />
   </div>
 )
 
