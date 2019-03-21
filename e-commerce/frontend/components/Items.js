@@ -58,3 +58,7 @@ class Items extends Component {
 }
 
 export default Items
+// named export 
+export { ALL_ITEMS_QUERY };
+
+
