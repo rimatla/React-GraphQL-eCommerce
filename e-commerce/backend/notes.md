@@ -25,6 +25,7 @@
 - datamodel.prisma
 - deploy it tp Prisma so DB csn be updated (crucial step) 
 - schema.graphql 
+- Flow schema -> resolvers -> 
 
 # queries playground
 ```
@@ -106,3 +107,14 @@ mutation {
   }
 }
 ```
+
+```
+query SINGLE_ITEM {
+  item(where: { id: "cjtglqqiq1ew30b9648nt18ge" }) {
+    title
+    description
+    id
+  }
+}
+
+````

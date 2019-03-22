@@ -5,7 +5,8 @@ const { forwardTo } = require('prisma-binding')
 const Query = {
   // IF the query is exactly the same on your Yoga as it is in your Prisma
   // forward the query from YOGA TO PRISMA
-  items: forwardTo('db')
+  items: forwardTo('db'),
+  item: forwardTo('db')
 
   // async items(parent, args, ctx, info) {
   //   console.log('Getting Items!!')
