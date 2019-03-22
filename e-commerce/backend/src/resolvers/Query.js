@@ -6,7 +6,8 @@ const Query = {
   // IF the query is exactly the same on your Yoga as it is in your Prisma
   // forward the query from YOGA TO PRISMA
   items: forwardTo('db'),
-  item: forwardTo('db')
+  item: forwardTo('db'),
+  itemsConnection: forwardTo('db')
 }
 
 module.exports = Query
