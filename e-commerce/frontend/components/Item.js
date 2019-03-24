@@ -21,13 +21,12 @@ class Item extends Component {
         {item.image && <img src={item.image} alt={item.title} />}
 
         <Link href={{ pathname: '/item', query: { id: item.id } }}>
-          <a>{item.title}</a>
+          <a className="itemTitle">{item.title}</a>
         </Link>
         <PriceTag>{formatMoney(item.price)}</PriceTag>
         <p>{item.description}</p>
 
-        <div className="buttonList">
-          {' '}
+        <div className="buttonList">         
           <Link
             href={{
               pathname: 'update',
