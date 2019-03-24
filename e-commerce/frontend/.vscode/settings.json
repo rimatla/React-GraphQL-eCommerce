@@ -6,8 +6,11 @@
     "titleBar.inactiveBackground": "#FFC600CC"
   },
   "cSpell.words": [
+    "heroku",
     "minmax",
+    "postbuild",
     "prefetch",
-    "sickfits"
+    "sickfits",
+    "waait"
   ]
 }

@@ -66,8 +66,9 @@ const mutations = {
        maxAge: 1000 * 60 * 60 * 24 * 365,
     })
      // return the user to the browser
-     return user;
+     return user
   }
 }
 
 module.exports = mutations
+

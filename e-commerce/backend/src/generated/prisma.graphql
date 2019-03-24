@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/tonki-honks/sick-fits/dev
-# timestamp: Sat Mar 23 2019 19:45:56 GMT-0500 (Central Daylight Time)
+# timestamp: Sat Mar 23 2019 23:32:25 GMT-0500 (Central Daylight Time)
 
 type AggregateItem {
   count: Int!
@@ -816,4 +816,5 @@ input UserWhereInput {
 
 input UserWhereUniqueInput {
   id: ID
+  email: String
 }
