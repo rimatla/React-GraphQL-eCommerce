@@ -27,6 +27,9 @@
 - schema.graphql 
 - Flow schema -> resolvers -> 
 
+# Sending emails
+- Create and swap your smtp credentails (mailtrap for dev) (postmark - prod)
+
 # queries playground
 ```
 # Write your query or mutation here
