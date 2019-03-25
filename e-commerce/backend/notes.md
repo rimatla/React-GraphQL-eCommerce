@@ -117,4 +117,36 @@ query SINGLE_ITEM {
   }
 }
 
-````
+```
+
+```
+SIGN UP
+mutation createUser {
+  signup(email: "joe@doe.com", name: "Joe doe", password: "234eiwc") {
+    name
+    email
+    permissions
+  }
+}
+```
+
+```
+REQUEST RESET 
+mutation requestReset {
+  requestReset(email: "jose@cuervo.com") {
+    message
+  }
+}
+
+```
+
+```
+mutation resetPassword {
+  resetPassword(resetToken:":)fbejbvu49y74y94y39phfru9449863-2yfhbp320:)", 
+    password:"1234", confirmPassword:"1234" ) {
+    id 
+    name
+  }
+}
+```
+
