@@ -7,10 +7,17 @@ const { transport, makeANiceEmail } = require('../mail')
 const mutations = {
   async createItem(parent, args, ctx, info) {
     // Todo: check if user is logged in
+    if (!ctx.request.userId) throw new Error('You must be logged in to do that!')
     // access DB
     const item = await ctx.db.mutation.createItem(
       {
         data: {
+          // make a prisma relationship between the item and the user
+          user: {
+            connect: {
+              id: ctx.request.userId
+            }
+          },
           ...args
         }
       },
