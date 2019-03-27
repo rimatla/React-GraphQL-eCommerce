@@ -21,7 +21,15 @@ server.express.use((req, res, next) => {
   }
   next()
 })
-// TODO use express middleware to populate current user
+// TODO use express middleware to populate current user on each request
+server.express.use(async (req, res, next) => {
+  // if they aren't logged in, skip this
+  if (!req.userId) return next()
+  const user = await db.query.user({ where: { id: req.userId } }, '{ id, permissions, email, name }')
+  req.user = user
+  // console.log(user) 
+  next()
+})
 
 server.start(
   {
@@ -31,8 +39,6 @@ server.start(
     }
   },
   details => {
-    console.log(
-      `Server is now running on port http://localhost:${details.port}`
-    )
+    console.log(`Server is now running on port http://localhost:${details.port}`)
   }
 )
