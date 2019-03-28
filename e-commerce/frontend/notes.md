@@ -19,3 +19,5 @@
 - Modify withData.js to handle local state
 - Create a Mutation to toggle the Cart
 - Write a resolver () to toggle the cart at withData.js
+- Create AddToCart.js
+- Add CartItem.js
