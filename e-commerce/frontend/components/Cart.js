@@ -26,7 +26,7 @@ const Cart = () => (
   <User>
     {({ data: { me } }) => {
       if (!me) return null
-      console.log(me)
+      // console.log(me)
 
       return (
         <Mutation mutation={TOGGLE_CART_MUTATION}>
@@ -40,7 +40,8 @@ const Cart = () => (
                     </CloseButton>
                     <Supreme>{me.name}'s Cart</Supreme>
                     <p>
-                      You Have {me.cart.length} Item{me.cart.length === 1 ? '' : 's'} in your cart.
+                      You Have {me.cart.length} Item
+                      {me.cart.length === 1 ? '' : 's'} in your cart.
                     </p>
                   </header>
                   <ul>
@@ -49,7 +50,7 @@ const Cart = () => (
                     ))}
                   </ul>
                   <footer>
-                  <p>{formatMoney(calcTotalPrice(me.cart))}</p>
+                    <p>{formatMoney(calcTotalPrice(me.cart))}</p>
                     <SickButton>Checkout</SickButton>
                   </footer>
                 </CartStyles>
