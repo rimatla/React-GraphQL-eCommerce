@@ -4,6 +4,7 @@ import { Query } from 'react-apollo'
 import Error from './ErrorMessage'
 import styled from 'styled-components'
 import Head from 'next/head'
+import AddToCart from './AddToCart'
 
 const SingleItemStyles = styled.div`
   max-width: 1200px;
@@ -60,6 +61,7 @@ class SingleItem extends Component {
                 <h2>Viewing {item.title}</h2>
                 <p>{item.description}</p>
               </div>
+              <AddToCart id={item.id} />
             </SingleItemStyles>
           )
         }}

@@ -33,7 +33,7 @@ class RemoveFromCart extends Component {
     /* apolo cache */
     // 1. read the cahe
     const data = cache.readQuery({ query: CURRENT_USER_QUERY })
-     console.log(data)
+    //console.log(data)
 
     // 2. remove item from the cart
     const cartItemId = payload.data.removeFromCart.id
